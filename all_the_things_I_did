@@ -1,0 +1,38 @@
+#!/bin/sh  
+#cd ~/Assignment1
+#cp /localdisk/data/BPSM/Assignment1/fastq/*.fq.gz .
+#cp /localdisk/data/BPSM/Assignment1/Tbb_genome/*.gz .
+#gzip -d *.fq.gz
+#fastqc *.fq
+#gzip -d Tb927_genome.fasta.gz
+#Bowtie2-build Tb927_genome.fasta Tb927_genome
+#bowtie2 -p 8 -x Tb927_genome -1 216_L8_1.fq -2 216_L8_2.fq -S ~/Assignment1/216.sam
+#bowtie2 -p 8 -x Tb927_genome -1 218_L8_1.fq -2 218_L8_2.fq -S ~/Assignment1/218.sam
+#bowtie2 -p 8 -x Tb927_genome -1 219_L8_1.fq -2 219_L8_2.fq -S ~/Assignment1/219.sam
+#bowtie2 -p 8 -x Tb927_genome -1 220_L8_1.fq -2 220_L8_2.fq -S ~/Assignment1/220.sam
+#bowtie2 -p 8 -x Tb927_genome -1 221_L8_1.fq -2 221_L8_2.fq -S ~/Assignment1/221.sam
+#bowtie2 -p 8 -x Tb927_genome -1 222_L8_1.fq -2 222_L8_2.fq -S ~/Assignment1/222.sam
+#samtools view -bS 216.sam > 216.bam
+#samtools view -bS 218.sam > 218.bam
+#samtools view -bS 219.sam > 219.bam
+#samtools view -bS 220.sam > 220.bam
+#samtools view -bS 221.sam > 221.bam
+#samtools view -bS 222.sam > 222.bam
+#samtools sort 216.bam -o 216.sort.bam
+#samtools sort 218.bam -o 218.sort.bam
+#samtools sort 219.bam -o 219.sort.bam
+#samtools sort 220.bam -o 220.sort.bam
+#samtools sort 221.bam -o 221.sort.bam
+#samtools sort 222.bam -o 222.sort.bam
+#samtools index -b 216.sort.bam
+#samtools index -b 218.sort.bam
+#samtools index -b 219.sort.bam
+#samtools index -b 220.sort.bam
+#samtools index -b 221.sort.bam
+#samtools index -b 222.sort.bam
+#bedtools multicov -bams 216.sort.bam 218.sort.bam 219.sort.bam 220.sort.bam 221.sort.bam 222.sort.bam -bed Tbbgenes.bed > bedresult
+#cut -f 4,7,8,9,10,11,12 bedresult > mean_data
+#cp /localdisk/data/BPSM/Assignment1/fastq/fqfiles .
+#cat mean_data|awk '{print $1,($2+$3+$4)/3,($5+$6+$7)/3}'
+#sed -i '1i\gene slender stumpy' mean.result
+
